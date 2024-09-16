@@ -1,0 +1,108 @@
+
+  
+  .custom-dropdown-menu {
+    width: 300px;
+  }
+  
+    body {
+      width: 100%;
+      height: 100%;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        rgb(12, 12, 12) 0,
+        rgb(34, 33, 33) 30px,
+        rgb(5, 5, 5) 120px,
+        transparent 2px
+      );
+      background-color: rgb(7, 7, 7);  
+  }
+  
+  @media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 100%;
+    }
+}
+
+.button {
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 10px 10px 20px rgba(0,0,0,.05);
+  background-color: #fff;
+  color: #121212;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 400px;
+}
+
+.button-decor {
+  position: absolute;
+  inset: 0;
+  background-color: var(--clr);
+  transform: translateX(-100%);
+  transition: transform .3s;
+  z-index: 0;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.button__icon {
+  width: 20px;
+  height: 20px;
+  background-color: var(--clr);
+  display: grid;
+  place-items: center;
+  border-radius:100%;
+}
+
+.button__text {
+  display: inline-block;
+  transition: color .2s;
+  padding: 2px 1.5rem 2px;
+  padding-left: .75rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+.button:hover .button__text {
+  color: #fff;
+}
+
+.button:hover .button-decor {
+  transform: translate(0);
+}
+
+/* Floating Button Style */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00ad54;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+/* Ensure modal is centered */
+.modal-dialog {
+  max-width: 90%;
+}
